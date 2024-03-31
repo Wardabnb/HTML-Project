@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MY portfolio</title>
+    <style>
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #cccccc;
+            padding: 10px 20px; 
+
+        }
+        header img{
+            padding-left: 150px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        nav ul {
+            list-style: none; /* Supprimer les puces */
+            margin: 0;
+            padding-right: 150px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+            font-size: large;
+        }
+        nav ul li a {
+            text-decoration: none; /* Supprimer les soulignements */
+            color: black; /* Changer la couleur des liens */
+        }
+        main section[name="about"] {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+            
+            
+        }
+        main section[name="about"] div {
+            flex: 1;
+            padding-left: 20em; /* Ajouter de l'espace entre le texte et l'image */
+            flex-wrap: wrap; /* Permettre le retour à la ligne si nécessaire */
+            
+        }
+        main section[name="about"] div h1{
+            font-size: 50px;
+        }
+        main section[name="about"] div p{
+            font-size: 20px;
+        }
+        main section[name="about"] div button{
+            font-size: large;
+            background-color: #d5c2c4;
+            margin: 50px;
+        }
+        main section[name="about"] img {
+            flex: 1; /* Pour que l'image occupe toute la hauteur disponible */
+            max-width: 500px; /* Limiter la largeur de l'image */
+            max-height: 600px;
+            padding-right: 10em;
+            flex-wrap: wrap; /* Permettre le retour à la ligne si nécessaire */
+            flex: 1;
+        }
+      
+        main section[name="work"] h1 {
+            text-align: center;
+            font-size: 50px;
+        }
+        main section[name="work"] p {
+          
+           
+            flex-wrap: wrap;
+            flex: 1;
+            text-align: center;
+            font-size: 30px
+        }
+        main section[name="work"] ul {
+            list-style-type: none;
+            margin: 0;
+            
+            display: flex;
+            align-items: center;
+             justify-content: space-between;
+      
+            
+        }
+        main section[name="work"] ul li {
+           
+            font-size: 30px;
+            flex-wrap: wrap;
+            padding-left: 5em;
+            padding-right: 7em;
+
+            
+        }
+        main section[name="work"] ul li a {
+            text-decoration: none; /* Supprimer les soulignements */
+            color: #384893;
+            flex-wrap: wrap;
+            padding-left: 4em;
+
+            
+        }
+     
+        main section[name="resume"] h1{
+            font-size: 50px;
+            text-align: center;
+        }
+        main section[name="resume"] div{
+            display: flex;
+            align-items: center;
+            
+            flex: 1;
+            padding-left: 50px; /* Ajouter de l'espace entre le texte et l'image */
+            flex-wrap: wrap;
+        }
+  
+        main section[name="resume"] div div[name="education"] h2{
+
+         padding-left: 150px;
+        
+            
+        }
+        main section[name="resume"] div div[name="education"] ul li{
+
+         font-size: 20px;
+         margin-left: 10px;
+
+   
+        }
+        main section[name="resume"] div div[name="skills"]{
+            display: flex;
+            padding-right: 150px;
+            align-items: center;
+            flex-direction: column;
+        }
+        main section[name="resume"] div div[name="skills"] h2{
+            padding-right: 90px;
+        }
+        
+      
+        main section[name="resume"] div div[name="skills"] ul {
+            display: flex;
+            flex-direction: column;
+     
+        }
+        main section[name="resume"] div div[name="skills"] ul li{
+            font-size: 20px;
+            flex-direction: column;
+            padding-right: 90px;
+        }
+        main section[name="contact"] h1 {
+            text-align: center;
+            font-size: 50px;
+        }
+        main section[name="contact"] form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        main section[name="contact"] form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        main section[name="contact"] form input[type="text"],
+        main section[name="contact"] form input[type="email"],
+        main section[name="contact"] form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Pour inclure les bordures et le padding dans la largeur totale */
+        }
+
+        main section[name="contact"] form textarea {
+            height: 150px; /* Hauteur fixe pour la zone de texte */
+        }
+
+        main section[name="contact"] form button{
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+       
+
+      
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer div {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer div p {
+            margin: 0;
+        }
+            
+    </style>
+</head>
+<body>
+<header>
+    <img src="logo.jpg" alt="logo" width="100">
+    <nav>
+        <ul>
+            <li><a href="#about">about</a></li>
+            <li><a href="#work">work</a></li>
+            <li><a href="#resume">resume</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section name="about">
+        <div>
+            <h1>I'm WARDA BOUNAB</h1>
+            <p>My name is WARDA Bounab, I'm a software engineer and I love practicing sports and swimming.<b> Welcome to my portfolio page.</b></p>
+            <form>
+                <button>My CV</button>
+            </form>
+        </div>
+        <img src="me.jpg" alt="me" width="300px">
+    </section>
+    <br>
+    <section name="work">
+        <h1>MY WORK</h1>
+        <p>this is  exemples of my works</p>
+        <ul>
+            <li><a href="https://github.com/djamal-soft/quote_app_girls.git">Quote app</a>
+                <br>
+                <br>
+            <img src="quote.jpg" alt="quote" width="400px" height="600px" >
+            </li>
+           
+            <li><a href="https://github.com/Wardabnb/CoughCheck.git">CoughCheck</a>
+            <br>
+            <br>
+            <img src="coughcheck.jpg" alt="quote" width="400px" height="600px">
+           </li>
+        </ul>
+    </section>
+    <section name="resume">
+        <h1>MY RESUME</h1>
+        <div>
+            <div name="education">
+                <h2>Education</h2>
+                <ul>
+                    <li>Bachelor's Degree in Computer Science (Software engineer), University of Constantine2 -NTIC(2020-2021)</li>
+                    <img src="ntic.png" alt="ntic" width="50px" height="50px">
+
+                    <img src="univ.jpg" alt="University" width="50px" height="50px">
+                    <br>
+                    <br>
+                    <li>Master's Degree in Software engineer, University of Constantine2 -NTIC(2022-2023)</li>
+                    <img src="ntic.png" alt="ntic" width="50px" height="50px">
+                    
+                    <img src="univ.jpg" alt="University" width="50px" height="50px">
+                </ul>
+            </div>
+            <div name="skills">
+                <h2>Skills</h2>
+              
+                <ul>
+                    <li>Programming Languages: Java, Python <br>  <img src="python.jpg" alt="python" width="50px" height="50px">
+                        <img src="java.png" alt="java" width="100px" height="80px"> </li>
+                  
+                 <br>
+                 <br>
+                    <li>Web Development: HTML, CSS
+                        <br>  <img src="css.png" alt="css" width="50px" height="50px">
+                        <img src="html.png" alt="html" width="50px" height="50px">
+
+                    </li>
+                    <br>
+                    <br>
+                    <li>Database Management: MYSQL
+                        <br>  <img src="mysql.png" alt="mysql" width="100px" height="80px">
+                      
+                    </li>
+                
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section name="contact">
+        <h1>Contact Me</h1>
+        <form>
+            <label for="name">name:</label>
+            <br>
+            <input type="text" name="name"/>
+            <br>
+            <label for="email">email:</label>
+            <br>
+            <input type="email" name="email"/>
+            <br>
+            <label for="message">message:</label>
+            <br>
+            <textarea name="message">
+
+            </textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+</main>
+<br>
+<footer>
+    <div >
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </div>
+</footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
